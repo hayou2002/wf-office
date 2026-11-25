@@ -1,0 +1,156 @@
+{
+  "workflow": "wf-office",
+  "title": "办公文档工作流",
+  "route": "办公文档、Word、DOCX、报告、纪要、方案、正式文件、讲义、培训材料、知识库文章、排版、校对、文档修订、文档图表",
+  "status": "active",
+  "created": "2026-11-25",
+  "updated": "2026-11-25",
+  "sources": [
+    {
+      "name": "create-viz",
+      "mode": "reference",
+      "source": {
+        "kind": "local",
+        "label": "本机目录",
+        "root": "shared",
+        "rel": "create-viz"
+      },
+      "recorded": "2026-11-25",
+      "uses": "阶段 3、5：选择图表类型，用 Python/HTML 生成可复现的办公图表",
+      "digest": "sha256:51dd954adfe17c32d2747972b2d146afad3defd8fbe9245b0fcba7c34f4817a9",
+      "files": {
+        "SKILL.md": "sha256:139125c8bad587722a4f5acba3a53e754776121ca987ccd7391ff9e4cff108f2"
+      }
+    },
+    {
+      "name": "data-visualization",
+      "mode": "reference",
+      "source": {
+        "kind": "local",
+        "label": "本机目录",
+        "root": "shared",
+        "rel": "data-visualization"
+      },
+      "recorded": "2026-11-25",
+      "uses": "阶段 3、6：图表选型、可访问性、颜色与准确性检查（create-viz 的支撑规则）",
+      "digest": "sha256:46dd67f1d0e0200bb4f8a1f7eed91dfd98ee61df2ce032bb634935cd9170e238",
+      "files": {
+        "SKILL.md": "sha256:6745bf103619eaccfd35fbb7241b2016ab5deb9f181e8571996fa65c6860339a"
+      }
+    },
+    {
+      "name": "documents",
+      "mode": "inline",
+      "source": {
+        "kind": "plugin",
+        "provider": "documents",
+        "label": "插件 documents"
+      },
+      "recorded": "2026-11-25",
+      "uses": "阶段 1-7：创建、编辑、批注、目录/页码、图片插入与 DOCX 渲染检查；随 App 提供"
+    },
+    {
+      "name": "learning-material-design",
+      "mode": "reference",
+      "source": {
+        "kind": "local",
+        "label": "本机目录",
+        "root": "shared",
+        "rel": "learning-material-design"
+      },
+      "recorded": "2026-11-25",
+      "uses": "阶段 3-6：学习材料的内容精加工、练习反馈与教学性呈现要求；文件验收留在本流程",
+      "digest": "sha256:7b91015264a7fddfd4583ada0386c838034f65ae80de99767d4efd4fecb2b81e",
+      "files": {
+        "README.md": "sha256:891e2f82bd0399bb9b3303f42ee896b2de1f5e57d56877f74600e3eef896356b",
+        "references/audit-checklist.md": "sha256:c67b1db4fa302ae5debbddd2da90f28c6c701ba372d1b300a9fef7c3211531c8",
+        "references/content-refinement.md": "sha256:6c0e8f220d4331fd452bf100207ec48a1188a80a068ae8ca7b8986e3e28f288c",
+        "references/educational-psychology.md": "sha256:8a6cfc266ec0548c949383a03ffa2026a834746ab2ef891689d942c212881f76",
+        "references/evidence-sources.md": "sha256:f09a79b5711e76bb0e90e3fa108098babd02867ef6a820b1a5752f781fe88c0a",
+        "references/layout-and-accessibility.md": "sha256:8e7e0aa3d3ecb3bba3c6d1be8874fda58f2b5e4b73d7c76b3ee37cb957e8e87f",
+        "SKILL.md": "sha256:1a594efdec1ec02f2ca3c952ea9bb04eece3c71d330c82fb72720aa677014f78"
+      }
+    },
+    {
+      "name": "oil-tone",
+      "mode": "reference",
+      "source": {
+        "kind": "github",
+        "repo": "oil-oil/oil-tone",
+        "subpath": "skills/oil-tone",
+        "commit": "39cbf92f76c90b7bb27a5b5d4ed88a1fc5fa31f6",
+        "label": "magpie 库",
+        "root": "library",
+        "rel": "oil-tone"
+      },
+      "recorded": "2026-11-25",
+      "uses": "阶段 2-3、6：文档内容写作、改写、润色与读者可读性检查",
+      "digest": "sha256:5b49ffbc81b70d08acccf7c9e428d2ea003f667181f954af2091f69bec84e96d",
+      "files": {
+        "agents/openai.yaml": "sha256:bfa517852281b0de7d999938a99137fbd07d4517f558395919cdb8dc5d9e372b",
+        "scripts/tone_lint.py": "sha256:6dd67656a1475e5c5ebe3caf8ce4f135d22309a222ec19a91bb438f0ff483bda",
+        "SKILL.md": "sha256:4c41226e5abe9e50035ca2e4edb0615f41d1d9bcac1de2d166bb3265837ca059"
+      }
+    },
+    {
+      "name": "pdf",
+      "mode": "inline",
+      "source": {
+        "kind": "plugin",
+        "provider": "pdf",
+        "label": "插件 pdf"
+      },
+      "recorded": "2026-11-25",
+      "uses": "阶段 7：需要 PDF 交付或 PDF 版式检查时使用；随 App 提供"
+    },
+    {
+      "name": "public-document-layout-master",
+      "mode": "reference",
+      "source": {
+        "kind": "local",
+        "label": "本机目录",
+        "root": "shared",
+        "rel": "public-document-layout-master"
+      },
+      "recorded": "2026-11-25",
+      "uses": "阶段 3、5：中文正式公文/政务材料的 DOCX 排版与结构质检；仅在正式公文场景使用",
+      "digest": "sha256:68f2cc2e2199677441eee6e9409ba59b7878c642f813c4195b549336aa5a3a62",
+      "files": {
+        "_meta.json": "sha256:23c7adc5aa456ffc664bf4909db57cf0b9173d17671b951a5dc0e1f6498ec275",
+        "README.md": "sha256:e0cd40a3c7935d4a67ff9b92fcff99cd6ec5e54782b36ab57200f9f587d7a9d3",
+        "references/document-types.md": "sha256:b57c662fbec9ae077149401713eb358fbfd1b42ef15a91e664337e04a5e4ab82",
+        "references/fault-handbook.md": "sha256:ad4d692e2e80665d3e34bc415760793ef248e231b5d1699c66e4694113f638c6",
+        "references/layout-profiles.md": "sha256:e708911f9d11c3b34a900a7ae074e163fb42767efff0faa991e9c1c5c2604de5",
+        "references/quality-gate.md": "sha256:333399db97b0499ed856000f265fdd312d787604f1654b590d096c60e289d066",
+        "references/standard-baseline.md": "sha256:36c76342e477a316a8026d9ef50525eec4d499d7954af4bbb37ac3aa13b9aba5",
+        "scripts/doc_guard.py": "sha256:a31c1472f882974c7091e6b8d440367221b605e9614d263a38c37bcf1e692310",
+        "scripts/official_doc.py": "sha256:ac56f970115f41e9cd40632ba7f790e1c28bebd3c11d5c46479c0c460ba97760",
+        "SKILL.md": "sha256:3a6c53478135a165ae3efb0b8e80b7cdaa901d914926f8fb5cc29f8b203ccdbc",
+        "tests/smoke_test.py": "sha256:94f86fab6bac879e12eec4c0eb63d08bebbd7448209b3392f0dbf1292ce58367"
+      }
+    },
+    {
+      "name": "vibehub",
+      "mode": "reference",
+      "source": {
+        "kind": "github",
+        "repo": "oil-oil/vibe-hub-skill",
+        "subpath": "skills/vibehub",
+        "commit": "aa2f2add8397daae06c55f9ca9d75dc7eee6c08d",
+        "label": "magpie 库",
+        "root": "library",
+        "rel": "vibehub"
+      },
+      "recorded": "2026-11-25",
+      "uses": "阶段 1-2：把办公需求转成可验收的表达，并给必要术语一句人话",
+      "digest": "sha256:0fd2989d222e89745818d7e51876277be090cbf0f28e9e9e830ed36553494f7f",
+      "files": {
+        "agents/openai.yaml": "sha256:18d92bcac85cc90093638a6835d79836e18dc398c605df17b8a3bd18d24350ad",
+        "scripts/vibehub.mjs": "sha256:2fa5e50399647f82a8a7837e04669eef22be1922a8d749d56e6e85b36ef5926f",
+        "SKILL.md": "sha256:51587bb757227f9653106d6db10e77bd12740f4d22de604759a957f1bc024e86",
+        "vibehub.config.json": "sha256:d1ec9be8d2037ba1400757fdd732fd9e793757cc51ddc59cfd5c1f2de3e50457"
+      }
+    }
+  ],
+  "env_digest": "98e20ca45ea00246834b4aaf253cfd854f3f03d4e18adcbc383e1382c43eb7a9"
+}

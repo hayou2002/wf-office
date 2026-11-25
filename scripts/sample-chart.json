@@ -1,0 +1,19 @@
+{
+  "type": "bar",
+  "title": "各渠道收入对比",
+  "subtitle": "2026 年 1–6 月，单位：万元",
+  "x_label": "渠道",
+  "y_label": "收入",
+  "categories": ["直营", "经销", "线上"],
+  "series": [
+    {
+      "name": "2026",
+      "values": [120, 86, 54],
+      "color": "#4C72B0"
+    }
+  ],
+  "source": "数据来源：财务月报，2026-06-30",
+  "value_format": "number",
+  "width": 1200,
+  "height": 720
+}
